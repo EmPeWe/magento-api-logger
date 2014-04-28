@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EmPeWe_ApiLogger>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends></depends>
+        </EmPeWe_ApiLogger>
+    </modules>
+</config>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EmPeWe_ApiLogger>
+            <version>0.0.1</version>
+        </EmPeWe_ApiLogger>
+    </modules>
+    <global>
+        <helpers>
+            <empewe_apilogger>
+                <class>EmPeWe_ApiLogger_Helper</class>
+            </empewe_apilogger>
+        </helpers>
+        <models>
+            <empewe_apilogger>
+                <class>EmPeWe_ApiLogger_Model</class>
+            </empewe_apilogger>
+            <api>
+                <rewrite>
+                    <server_handler>EmPeWe_ApiLogger_Model_Server_Handler</server_handler>
+                    <server_v2_handler>EmPeWe_ApiLogger_Model_Server_V2_Handler</server_v2_handler>
+                </rewrite>
+            </api>
+        </models>
+    </global>
+    <default>
+        <apilogger_options>
+            <config>
+                <apilogger_log_file>EmPeWe_ApiLogger.log</apilogger_log_file>
+            </config>
+        </apilogger_options>
+    </default>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <apilogger_options>
+                                            <title>EmPeWe - All</title>
+                                        </apilogger_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>
