@@ -3,7 +3,7 @@ Magento SOAP API Logger
 
 Facts
 -----
-- version: 0.0.1
+- version: 0.0.2
 - [extension on GitHub](https://github.com/EmPeWe/magento-api-logger)
 
 Description
