@@ -23,8 +23,8 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <apilogger_log_active translate="label">
-                            <label>Activate Logging:</label>
+                        <apilogger_v1_log_active translate="label">
+                            <label>Activate Logging (v1):</label>
                             <comment>Don't forget to deactivate before going live!</comment>
                             <frontend_type>select</frontend_type>
                             <sort_order>10</sort_order>
@@ -32,16 +32,35 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                        </apilogger_log_active>
-                        <apilogger_log_file translate="label">
-                            <label>Log filename:</label>
+                        </apilogger_v1_log_active>
+                        <apilogger_v1_log_file translate="label">
+                            <label>Log filename (v1):</label>
                             <comment>Default is EmPeWe_ApiLogger.log</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </apilogger_log_file>
+                        </apilogger_v1_log_file>
+                        <apilogger_v2_log_active translate="label">
+                            <label>Activate Logging (v2):</label>
+                            <comment>Don't forget to deactivate before going live!</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </apilogger_v2_log_active>
+                        <apilogger_v2_log_file translate="label">
+                            <label>Log filename (v2):</label>
+                            <comment>Default is EmPeWe_ApiLogger.log</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </apilogger_v2_log_file>
                     </fields>
                 </config>
             </groups>

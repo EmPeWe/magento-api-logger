@@ -7,9 +7,9 @@ class EmPeWe_ApiLogger_Model_Server_Handler extends Mage_Api_Model_Server_Handle
     
     public function __construct()
     {
-        $this->boolLogActive  = Mage::getStoreConfig('apilogger_options/config/apilogger_log_active');
-        $this->strLogfile     = Mage::getStoreConfig('apilogger_options/config/apilogger_log_file')
-                              ? Mage::getStoreConfig('apilogger_options/config/apilogger_log_file')
+        $this->boolLogActive  = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_active');
+        $this->strLogfile     = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
+                              ? Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
                               : 'EmPeWe_ApiLogger.log';
     }
 
