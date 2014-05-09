@@ -1,2 +1,2 @@
-src/app/code/local/EmPeWe/ApiLogger     app/code/local/EmPeWe/ApiLogger
+src/app/code/community/EmPeWe/ApiLogger     app/code/community/EmPeWe/ApiLogger
 src/app/etc/modules/*    app/etc/modules/

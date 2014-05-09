@@ -3,7 +3,7 @@
     <modules>
         <EmPeWe_ApiLogger>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
             <depends></depends>
         </EmPeWe_ApiLogger>
     </modules>
