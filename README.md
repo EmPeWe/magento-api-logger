@@ -17,7 +17,7 @@ Requirements
 
 Compatibility
 -------------
-- Tested on Magento CE 1.8.1 and EE 1.13.1, but should work with older versions too
+- Tested on Magento CE 1.8.1.0/1.9.0.0 and EE 1.13.1.0/1.14.0.0, but should work with older versions too
 
 Installation Instructions
 -------------------------
