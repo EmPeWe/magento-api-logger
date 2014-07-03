@@ -3,7 +3,7 @@ Magento SOAP API Logger
 
 Facts
 -----
-- version: 0.0.3
+- version: 0.0.4
 - [extension on GitHub](https://github.com/EmPeWe/magento-api-logger)
 
 Description
@@ -17,7 +17,7 @@ Requirements
 
 Compatibility
 -------------
-- Tested on Magento CE 1.8.1.0/1.9.0.0 and EE 1.13.1.0/1.14.0.0, but should work with older versions too
+- Tested on Magento CE 1.8.1.0/1.9.0.1 and EE 1.13.1.0/1.14.0.0, but should work with older versions too
 
 Installation Instructions
 -------------------------
@@ -27,7 +27,7 @@ Installation Instructions
 
 Hints
 -----
-1. The logger will only work, if the global log settings (System -> Configuration -> Developer -> Log Settings) are active.
+1. ~~The logger will only work, if the global log settings (System -> Configuration -> Developer -> Log Settings) are active.~~
 2. If you installed the extensions with modman, don't forget to allow Symlinks (System -> Configuration -> Developer -> Template Settings)
 
 Uninstallation

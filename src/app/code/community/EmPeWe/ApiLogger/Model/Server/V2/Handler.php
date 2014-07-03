@@ -15,7 +15,7 @@ class EmPeWe_ApiLogger_Model_Server_V2_Handler extends Mage_Api_Model_Server_V2_
 
     public function __call($function, $args = array())
     {
-        if($this->boolLogActive) { Mage::log("SOAP Method (V2): $function \nParameters: " . print_r($args, true), null, $this->strLogfile); }
+        if($this->boolLogActive) { Mage::log("SOAP Method (V2): $function \nParameters: " . print_r($args, true), null, $this->strLogfile, true); }
         
         return parent::__call($function, $args);
     }
