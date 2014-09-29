@@ -61,6 +61,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </apilogger_v2_log_file>
+                        <apilogger_force_log translate="label">
+                            <label>Force Logging:</label>
+                            <comment>Log even, if system logging is deactivated</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </apilogger_force_log>
                     </fields>
                 </config>
             </groups>
