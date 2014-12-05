@@ -33,11 +33,21 @@
                             <show_in_store>1</show_in_store>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </apilogger_v1_log_active>
+                        <apilogger_v1_log_verbose translate="label">
+                            <label>Verbose Logging (v1):</label>
+                            <comment>Log response returned</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </apilogger_v1_log_verbose>
                         <apilogger_v1_log_file translate="label">
                             <label>Log filename (v1):</label>
                             <comment>Default is EmPeWe_ApiLogger.log</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>20</sort_order>
+                            <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -46,17 +56,27 @@
                             <label>Activate Logging (v2):</label>
                             <comment>Don't forget to deactivate before going live!</comment>
                             <frontend_type>select</frontend_type>
-                            <sort_order>30</sort_order>
+                            <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </apilogger_v2_log_active>
+                        <apilogger_v2_log_verbose translate="label">
+                            <label>Verbose Logging (v2):</label>
+                            <comment>Log response returned</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </apilogger_v2_log_verbose>
                         <apilogger_v2_log_file translate="label">
                             <label>Log filename (v2):</label>
                             <comment>Default is EmPeWe_ApiLogger.log</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>40</sort_order>
+                            <sort_order>60</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -65,7 +85,7 @@
                             <label>Force Logging:</label>
                             <comment>Log even, if system logging is deactivated</comment>
                             <frontend_type>select</frontend_type>
-                            <sort_order>50</sort_order>
+                            <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
