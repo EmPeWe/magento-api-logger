@@ -3,7 +3,7 @@ Magento SOAP API Logger
 
 Facts
 -----
-- version: 0.0.5
+- version: 0.0.6
 - [extension on GitHub](https://github.com/EmPeWe/magento-api-logger)
 
 Description
@@ -17,7 +17,7 @@ Requirements
 
 Compatibility
 -------------
-- Tested on Magento CE 1.8.1.0/1.9.0.1 and EE 1.13.1.0/1.14.0.0, but should work with older versions too
+- Tested on Magento CE 1.8.1.0 - 1.9.1 and EE 1.13.1 - 1.14.1, but should work with older versions too
 
 Installation Instructions
 -------------------------
