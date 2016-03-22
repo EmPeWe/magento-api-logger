@@ -1,0 +1,26 @@
+{
+    "name": "EmPeWe/magento-api-logger",
+    "license": "Beerware",
+    "type": "magento-module",
+    "description": "Magento extensions to log SOAP API calls",
+    "keywords": "magento api logging events",
+    "homepage": "https://github.com/EmPeWe/magento-api-logger",
+    "require":
+    {
+        "php": ">5.2",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":
+    [
+        {
+            "name": "Manuel Weinstein",
+            "homepage": "https://github.com/EmPeWe",
+            "role": "Developer"
+        }
+    ],
+    "support":
+    {
+        "source": "https://github.com/EmPeWe/magento-api-logger",
+        "issues": "https://github.com/EmPeWe/magento-api-logger/issues"
+    }
+}

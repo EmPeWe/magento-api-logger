@@ -45,4 +45,4 @@ Any contribution is highly appreciated. The best way to contribute code is to op
 
 Copyright
 ---------
-(c) 2014 EmPeWe
+(c) 2014-2016 EmPeWe
