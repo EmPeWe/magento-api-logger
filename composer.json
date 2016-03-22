@@ -3,7 +3,13 @@
     "license": "Beerware",
     "type": "magento-module",
     "description": "Magento extensions to log SOAP API calls",
-    "keywords": "magento api logging events",
+    "keywords":
+    [
+        "magento",
+        "api",
+        "logging",
+        "events"
+    ],
     "homepage": "https://github.com/EmPeWe/magento-api-logger",
     "require":
     {
