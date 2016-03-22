@@ -1,5 +1,5 @@
 {
-    "name": "EmPeWe/magento-api-logger",
+    "name": "empewe/magento-api-logger",
     "license": "Beerware",
     "type": "magento-module",
     "description": "Magento extensions to log SOAP API calls",
