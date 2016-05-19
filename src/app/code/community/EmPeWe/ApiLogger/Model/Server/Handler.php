@@ -2,18 +2,16 @@
 
 class EmPeWe_ApiLogger_Model_Server_Handler extends Mage_Api_Model_Server_Handler
 {
-    private $boolLogActive  = false;
+    private $boolLogActive = false;
     private $boolLogVerbose = false;
-    private $strLogfile     = '';
+    private $strLogfile = '';
     
     public function __construct()
     {
-        $this->boolLogActive  = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_active');
+        $this->boolLogActive = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_active');
         $this->boolLogVerbose = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_verbose');
-        $this->strLogfile     = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
-                              ? Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
-                              : 'EmPeWe_ApiLogger.log';
-        $this->forceLog        = Mage::getStoreConfig('apilogger_options/config/apilogger_force_log');
+        $this->strLogfile = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file') ? Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file') : 'EmPeWe_ApiLogger.log';
+        $this->forceLog = Mage::getStoreConfig('apilogger_options/config/apilogger_force_log');
     }
 
     public function call($sessionId, $apiPath, $args = array())
@@ -29,10 +27,7 @@ class EmPeWe_ApiLogger_Model_Server_Handler extends Mage_Api_Model_Server_Handle
             {
                 $log.= "\nResponse: " . print_r($response, true);
             }
-            Mage::log($log,
-                null,
-                $this->strLogfile,
-                $this->forceLog);
+            Mage::log($log, null, $this->strLogfile, $this->forceLog);
         }
         
         return $response;
