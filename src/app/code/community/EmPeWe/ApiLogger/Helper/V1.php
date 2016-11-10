@@ -46,6 +46,7 @@ class EmPeWe_ApiLogger_Helper_V1 extends Mage_Core_Helper_Abstract
 
         $log = "SOAP Method (V1): {$apiPath}";
         $log .= "\nCalled from IP: {$this->getRemoteAddr()}";
+        $log .= "\nUser Agent: {$this->getHttpUserAgent()}";
         $log .= "\nParameters: " . print_r(array_merge((array)$sessionId, $args), true);
 
         $apiUser = $this->getSession()->getUser();
@@ -60,7 +61,6 @@ class EmPeWe_ApiLogger_Helper_V1 extends Mage_Core_Helper_Abstract
 
         if ($exception) {
             $log .= "\nException: {$exception}";
-
         }
 
         $logLevel = ($exception ? Zend_Log::WARN : Zend_Log::DEBUG);
@@ -74,6 +74,14 @@ class EmPeWe_ApiLogger_Helper_V1 extends Mage_Core_Helper_Abstract
     protected function getRemoteAddr()
     {
         return Mage::helper('core/http')->getRemoteAddr();
+    }
+
+    /**
+     * @return string
+     */
+    protected function getHttpUserAgent()
+    {
+        return Mage::helper('core/http')->getHttpUserAgent();
     }
 
     /**
