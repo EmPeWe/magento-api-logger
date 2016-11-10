@@ -8,13 +8,13 @@ class EmPeWe_ApiLogger_Model_Server_Handler extends Mage_Api_Model_Server_Handle
             $response = parent::call($sessionId, $apiPath, $args);
 
             $this->getHelper()->log($sessionId, $apiPath, $args, $response);
+
+            return $response;
         } catch (Exception $e) {
             $this->getHelper()->log($sessionId, $apiPath, $args, isset($response) ? $response : null, $e);
 
             throw $e;
         }
-
-        return $response;
     }
 
     /**
