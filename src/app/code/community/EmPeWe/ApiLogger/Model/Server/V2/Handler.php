@@ -8,6 +8,8 @@ class EmPeWe_ApiLogger_Model_Server_V2_Handler extends Mage_Api_Model_Server_V2_
 
     public function __construct()
     {
+        parent::__construct();
+
         $this->boolLogActive = Mage::getStoreConfig('apilogger_options/config/apilogger_v2_log_active');
         $this->boolLogVerbose = Mage::getStoreConfig('apilogger_options/config/apilogger_v2_log_verbose');
         $this->strLogfile = Mage::getStoreConfig('apilogger_options/config/apilogger_v2_log_file')
