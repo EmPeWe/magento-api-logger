@@ -2,7 +2,7 @@
 <config>
     <modules>
         <EmPeWe_ApiLogger>
-            <version>0.0.6</version>
+            <version>0.0.7</version>
         </EmPeWe_ApiLogger>
     </modules>
     <global>
@@ -26,7 +26,9 @@
     <default>
         <apilogger_options>
             <config>
+                <apilogger_v1_log_active>1</apilogger_v1_log_active>
                 <apilogger_v1_log_file>EmPeWe_ApiLogger.log</apilogger_v1_log_file>
+                <apilogger_v2_log_active>1</apilogger_v2_log_active>
                 <apilogger_v2_log_file>EmPeWe_ApiLogger.log</apilogger_v2_log_file>
             </config>
         </apilogger_options>
