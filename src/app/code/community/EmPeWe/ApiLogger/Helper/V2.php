@@ -45,15 +45,15 @@ class EmPeWe_ApiLogger_Helper_V2 extends Mage_Core_Helper_Abstract
         }
 
         $log = "SOAP Method (V2): {$function}";
-        $log .= "\nCalled from IP: {$this->getRemoteAddr()}";
-        $log .= "\nUser Agent: {$this->getHttpUserAgent()}";
-        $log .= "\nParameters: " . print_r($args, true);
 
         $apiUser = $this->getSession()->getUser();
-
         if ($apiUser instanceof Mage_Api_Model_User) {
             $log .= sprintf("\nAPI User: %s (ID: %s)", $apiUser->getUsername(), $apiUser->getId());
         }
+
+        $log .= "\nCalled from IP: {$this->getRemoteAddr()}";
+        $log .= "\nUser Agent: {$this->getHttpUserAgent()}";
+        $log .= "\nParameters: " . print_r($args, true);
 
         if ($this->getIsVerboseEnabled()) {
             $log .= "\nResponse: " . print_r($response, true);
