@@ -38,13 +38,15 @@ class EmPeWe_ApiLogger_Helper_V2 extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfigFlag('apilogger_options/config/apilogger_force_log', $store);
     }
 
-    public function log($function, $args = array(), $response = null, Exception $exception = null)
+    public function log($requestId, $function, $args = array(), $response = null, Exception $exception = null)
     {
-        if (!$this->getIsActive()) {
+        if (!$this->getIsActive() || ($response === null && !$this->getIsVerboseEnabled())) {
             return;
         }
 
         $log = "SOAP Method (V2): {$function}";
+
+        $log .= "\nRequest ID: {$requestId}";
 
         $apiUser = $this->getSession()->getUser();
         if ($apiUser instanceof Mage_Api_Model_User) {
