@@ -2,39 +2,41 @@
 
 class EmPeWe_ApiLogger_Model_Server_Handler extends Mage_Api_Model_Server_Handler
 {
-    private $boolLogActive  = false;
-    private $boolLogVerbose = false;
-    private $strLogfile     = '';
-    
-    public function __construct()
-    {
-        $this->boolLogActive  = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_active');
-        $this->boolLogVerbose = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_verbose');
-        $this->strLogfile     = Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
-                              ? Mage::getStoreConfig('apilogger_options/config/apilogger_v1_log_file')
-                              : 'EmPeWe_ApiLogger.log';
-        $this->forceLog        = Mage::getStoreConfig('apilogger_options/config/apilogger_force_log');
-    }
-
     public function call($sessionId, $apiPath, $args = array())
     {
-        $response = parent::call($sessionId, $apiPath, $args);
-        
-        if($this->boolLogActive)
-        {
-            $log = "SOAP Method (V1): $apiPath";
-            $log.= "\ncalled from {$_SERVER['REMOTE_ADDR']}";
-            $log.= "\nParameters: " . print_r(array_merge((array)$sessionId, $args), true);
-            if($this->boolLogVerbose)
-            {
-                $log.= "\nResponse: " . print_r($response, true);
-            }
-            Mage::log($log,
-                null,
-                $this->strLogfile,
-                $this->forceLog);
+        $requestId = $this->generateRequestId($sessionId);
+
+        $helper = $this->getHelper();
+
+        try {
+            $helper->log($requestId, $sessionId, $apiPath, $args);
+
+            $response = parent::call($sessionId, $apiPath, $args);
+
+            $helper->log($requestId, $sessionId, $apiPath, $args, $response);
+
+            return $response;
+        } catch (Exception $e) {
+            $helper->log($requestId, $sessionId, $apiPath, $args, isset($response) ? $response : null, $e);
+
+            throw $e;
         }
-        
-        return $response;
     }
-} // Class EmPeWe_ApiLogger_Model_Server_Handler End
+
+    /**
+     * @return EmPeWe_ApiLogger_Helper_V1
+     */
+    protected function getHelper()
+    {
+        return Mage::helper('empewe_apilogger/v1');
+    }
+
+    /**
+     * @param string $sessionId
+     * @return string
+     */
+    protected function generateRequestId($sessionId)
+    {
+        return uniqid($sessionId . '_', true);
+    }
+}
